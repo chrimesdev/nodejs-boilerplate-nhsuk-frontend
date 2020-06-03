@@ -1,13 +1,20 @@
-/* eslint-disable camelcase */
-// NHS.UK frontend
-import nhsuk_header from '../../node_modules/nhsuk-frontend/packages/components/header/header';
-import nhsuk_skipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link';
-import autocomplete from '../../node_modules/nhsuk-frontend/packages/components/header/autocomplete';
+// NHS.UK frontend components
+import Checkboxes from '../../node_modules/nhsuk-frontend/packages/components/checkboxes/checkboxes';
+import Details from '../../node_modules/nhsuk-frontend/packages/components/details/details';
+import Header from '../../node_modules/nhsuk-frontend/packages/components/header/header';
+import Radios from '../../node_modules/nhsuk-frontend/packages/components/radios/radios';
+import SkipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link';
 
-// HTML5 polyfills
-import '../../node_modules/nhsuk-frontend/packages/components/details/details.polyfill';
+// NHS.UK frontend polyfills
+import '../../node_modules/nhsuk-frontend/packages/polyfills';
 
-// Initialise components
-nhsuk_header();
-nhsuk_skipLink();
-autocomplete();
+// Initialize components
+document.addEventListener('DOMContentLoaded', () => {
+  Details();
+  Header();
+  SkipLink();
+  Radios();
+  Checkboxes();
+});
+
+// Application JS
